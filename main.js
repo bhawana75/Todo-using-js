@@ -1,6 +1,5 @@
 let form = document.getElementById("form");
 let textInput = document.getElementById("textInput");
-let dateInput = document.getElementById("dateInput");
 let textarea = document.getElementById("textarea");
 let msg = document.getElementById("msg");
 let tasks = document.getElementById("tasks");
@@ -14,7 +13,7 @@ form.addEventListener("submit", (e) => {
 let formValidation = () => {
   if (textInput.value === "") {
     console.log("failure");
-    msg.innerHTML = "Task cannot be blank";
+    msg.innerHTML = "This field can't be empty";
   } else {
     console.log("success");
     msg.innerHTML = "";
@@ -33,7 +32,6 @@ let data = [{}];
 let acceptData = () => {
   data.push({
     text: textInput.value,
-    date: dateInput.value,
     description: textarea.value,
   });
 
@@ -49,7 +47,6 @@ let createTasks = () => {
     return (tasks.innerHTML += `
     <div id=${y}>
           <span class="fw-bold">${x.text}</span>
-          <span class="small text-secondary">${x.date}</span>
           <p>${x.description}</p>
   
           <span class="options">
@@ -75,15 +72,13 @@ let editTask = (e) => {
   let selectedTask = e.parentElement.parentElement;
 
   textInput.value = selectedTask.children[0].innerHTML;
-  dateInput.value = selectedTask.children[1].innerHTML;
-  textarea.value = selectedTask.children[2].innerHTML;
+  textarea.value = selectedTask.children[1].innerHTML;
 
   deleteTask(e);
 };
 
 let resetForm = () => {
   textInput.value = "";
-  dateInput.value = "";
   textarea.value = "";
 };
 

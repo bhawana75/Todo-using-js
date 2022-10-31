@@ -1,7 +1,7 @@
 body {
     font-family: sans-serif;
     margin: 0 50px;
-    background-color: #e5e5e5;
+    background-color: lightgrey;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -11,13 +11,14 @@ body {
   
   .app {
     background-color: #fff;
-    width: 300px;
-    height: 500px;
-    border: 5px solid #abcea1;
-    border-radius: 8px;
+    width: 400px;
+    height: 600px;
+    border: 9px solid #87CEEB;
+    border-radius: 28px;
     padding: 15px;
     overflow-y: scroll;
   }
+
   
   .app::-webkit-scrollbar {
     width: 0 !important;
@@ -27,14 +28,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(171, 206, 161, 0.35);
+    background-color: #AFEEEE;
     padding: 5px 10px;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
   }
   
   .fa-plus {
-    background-color: #abcea1;
+    background-color: #87CEEB;
     padding: 3px;
     border-radius: 3px;
   }
@@ -46,8 +47,8 @@ body {
   }
   
   #tasks div {
-    border: 3px solid #abcea1;
-    background-color: #e2eede;
+    border: 3px solid #4169E1;
+    background-color: #AFEEEE;
     border-radius: 6px;
     padding: 5px;
     display: grid;
@@ -67,3 +68,5 @@ body {
   #msg {
     color: red;
   }
+
+  
